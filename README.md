@@ -1,4 +1,4 @@
-# scraping_note
+# scraping-note
 constructed by vuex, vue-router
 
 ## Project setup
