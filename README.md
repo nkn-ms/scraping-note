@@ -1,4 +1,5 @@
-# scraping_note1
+# scraping_note
+scraping by puppeteer, constructed by vuex, vue-router
 
 ## Project setup
 ```
