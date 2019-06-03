@@ -6,9 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     scrapingData: null,
-    detailData: null,
-    defaultOrder: true,
-    sortOrder: 1
+    detailData: null
   },
   mutations: {
     setScrapingData (state, data) {
