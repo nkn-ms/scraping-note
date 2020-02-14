@@ -99,7 +99,10 @@ export default {
       })
     },
     triangleClass () {
-      let classObject = { 'inactive': this.isActive, 'up-side-down': this.upSideDown }
+      let classObject = {
+        inactive: this.isActive,
+        'up-side-down': this.upSideDown
+      }
       return classObject
     }
   },
@@ -181,6 +184,6 @@ export default {
   color: lightgray;
 }
 .up-side-down {
-  transform: rotateX(180deg)
+  transform: rotateX(180deg);
 }
 </style>

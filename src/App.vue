@@ -2,7 +2,7 @@
   <div id="app">
     <h1>scraping note</h1>
     <a
-      href="https://github.com/nkn-ms/heroku-puppeteer-note"
+      href="https://github.com/nkn-ms/scraping-note"
       target="_blank"
       rel="noopener noreferrer"
       class="src"

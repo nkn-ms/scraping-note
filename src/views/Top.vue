@@ -21,12 +21,6 @@ export default {
     isScrapingData () {
       return this.$store.state.scrapingData !== null
     }
-  },
-  methods: {
-    setScrapingData (data) {
-      this.$store.dispatch('setScrapingData', data)
-      console.log(this.$store.state)
-    }
   }
 }
 </script>
