@@ -33,7 +33,7 @@
       </v-btn>
     </v-app-bar>
 
-    <v-main width="960">
+    <v-main>
       <router-view />
     </v-main>
   </v-app>

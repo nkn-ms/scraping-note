@@ -1,6 +1,11 @@
 <template>
-  <div style="width:960px;margin:auto">
-    <sc-header class="my-4" />
+  <div style="max-width:960px;margin:auto">
+    <span class="source_code">
+      <a href="https://github.com/nkn-ms/scraping-note" target="_blank">
+        <img src="/GitHub-Mark-32px.png" alt="source code" />
+      </a>
+    </span>
+    <sc-header class="mb-4" />
     <sc-contents-table class="mx-10 mb-4" />
     <router-view />
     <!-- <sc-detail>の挿入 -->
@@ -20,3 +25,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.source_code {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+</style>
