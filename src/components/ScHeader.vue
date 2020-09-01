@@ -3,11 +3,11 @@
     <v-btn @click="getScraping">
       go scraping
     </v-btn>
-    <span
-      ><a href="https://github.com/nkn-ms/scraping-note" target="_blank"
-        >source code</a
-      ></span
-    >
+    <span>
+      <a href="https://github.com/nkn-ms/scraping-note" target="_blank">
+        source code
+      </a>
+    </span>
   </div>
 </template>
 
