@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-if="detailData"
-    class="detail"
-  >
+  <div v-if="detailData" class="detail">
     <h1 class="mbt-0">
       Detail
     </h1>
@@ -17,10 +14,7 @@
       </div>
       <div class="content">
         <div class="author">
-          <img
-            :src="detailData.icon"
-            class="icon"
-          >
+          <img :src="detailData.icon" class="icon" />
         </div>
         <div class="description">
           {{ detailData.description }}
@@ -30,10 +24,7 @@
           </div>
         </div>
         <div>
-          <img
-            :src="detailData.eyecatch_src"
-            class="eyecatch"
-          >
+          <img :src="detailData.eyecatch_src" class="eyecatch" />
         </div>
       </div>
     </a>
@@ -44,22 +35,27 @@
 export default {
   name: 'ScDetail',
   computed: {
-    detailData () {
+    detailData() {
       console.log('Detail computed')
       console.log(this.$store.state.detailData)
       return this.$store.state.detailData
     }
   },
   watch: {
-    '$route': function (to, from) {
+    $route: function(to, from) {
       if (to.path !== from.path) {
         // history.back() history.forward()時にdetailを更新
-        this.$store.dispatch('setDetailData', this.$store.state.scrapingData[location.pathname.split('/detail/')[1] - 1])
+        this.$store.dispatch(
+          'setDetailData',
+          this.$store.state.scrapingData[
+            location.pathname.split('/detail/')[1] - 1
+          ]
+        )
       }
     }
   },
   methods: {
-    disp (e) {
+    disp(e) {
       if (!window.confirm('noteを開きますがよろしいでしょうか？？')) {
         e.preventDefault()
       }
@@ -94,7 +90,7 @@ a {
 }
 .description {
   position: relative;
-  width: calc(100% - 150px - 150px );
+  width: calc(100% - 150px - 150px);
   margin: 0 10px;
 }
 .meta {
@@ -102,7 +98,6 @@ a {
   position: absolute;
   bottom: 0px;
   left: 0px;
-
 }
 .eyecatch {
   width: 150px;

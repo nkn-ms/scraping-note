@@ -6,27 +6,21 @@
         <span class="btn-heart">
           <font-awesome-icon :icon="['far', 'heart']" />
         </span>
-        <span
-          class="triangle"
-          :class="triangleClass"
-        />
+        <span class="triangle" :class="triangleClass" />
       </base-button>
       <base-button @click="changeDefaultOrder">
         default
       </base-button>
     </div>
     <table class="contents">
-      <tr
-        v-for="item in sortedItems"
-        :key="item.url"
-      >
+      <tr v-for="item in sortedItems" :key="item.url">
         <td class="heart">
           <font-awesome-icon :icon="['far', 'heart']" />
           {{ item.like }}
         </td>
         <td>
           <router-link
-            :to=" '/detail/' + item.id"
+            :to="'/detail/' + item.id"
             @click.native="setDetailData(item)"
           >
             {{ item.title | slicer(30) }}
@@ -46,14 +40,14 @@ export default {
     BaseButton
   },
   filters: {
-    slicer (str, int) {
+    slicer(str, int) {
       if (str.length > int) {
         str = str.slice(0, int) + '...'
       }
       return str
     }
   },
-  data () {
+  data() {
     return {
       defaultOrder: true,
       sortItemsOrder: 1,
@@ -62,13 +56,13 @@ export default {
     }
   },
   computed: {
-    items () {
+    items() {
       return this.$store.state.scrapingData
     },
-    getScrapingData () {
+    getScrapingData() {
       return this.$store.state.scrapingData
     },
-    sortedItems () {
+    sortedItems() {
       let items
       if (this.items == null) {
         return []
@@ -80,7 +74,7 @@ export default {
       }
       return items
     },
-    sortedItemsByLike () {
+    sortedItemsByLike() {
       this.changeUpSideDown()
       this.changeActive()
       return this.items.slice().sort((a, b) => {
@@ -93,12 +87,12 @@ export default {
         }
       })
     },
-    sortedItemsById () {
+    sortedItemsById() {
       return this.items.slice().sort((a, b) => {
         return a.id > b.id ? 1 : a.id < b.id ? -1 : 0
       })
     },
-    triangleClass () {
+    triangleClass() {
       let classObject = {
         inactive: this.isActive,
         'up-side-down': this.upSideDown
@@ -108,27 +102,27 @@ export default {
   },
   methods: {
     // onclickでDettail用に該当要素のデータをstoreに渡す
-    setDetailData (detailData) {
+    setDetailData(detailData) {
       console.log('@click')
       this.$store.dispatch('setDetailData', detailData)
     },
-    changeOrderByLike () {
+    changeOrderByLike() {
       this.upSideDown = true
       this.defaultOrder = false
       this.sortItemsOrder *= -1
     },
-    changeDefaultOrder () {
+    changeDefaultOrder() {
       this.isActive = true
       this.defaultOrder = true
     },
-    changeUpSideDown () {
+    changeUpSideDown() {
       if (this.sortItemsOrder === 1) {
         this.upSideDown = true
       } else {
         this.upSideDown = false
       }
     },
-    changeActive () {
+    changeActive() {
       if (this.defaultOrder) {
         this.isActive = true
       }

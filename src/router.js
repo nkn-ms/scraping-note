@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Top from './views/Top.vue'
-import ScDetail from './components/ScDetail.vue'
+import ScDetailCard from './components/ScDetailCard.vue'
 
 Vue.use(Router)
 
@@ -15,7 +15,7 @@ export default new Router({
       children: [
         {
           path: 'detail/:id',
-          component: ScDetail
+          component: ScDetailCard
         }
       ]
     },
