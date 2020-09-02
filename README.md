@@ -2,7 +2,7 @@
 constructed by vuex, vue-router
 
 scraping code
-https://github.com/nkn-ms/heroku-puppeteer-note/blob/master/index.js
+https://github.com/nkn-ms/heroku-puppeteer-note/blob/master/scraping.js
 
 working in here
 https://heroku-puppeteer-note.herokuapp.com
