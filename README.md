@@ -1,5 +1,5 @@
 # scraping-note
-constructed by vuex, vue-router
+constructed by vuex, vue-router, vuetify
 
 scraping code
 https://github.com/nkn-ms/heroku-puppeteer-note/blob/master/scraping.js
