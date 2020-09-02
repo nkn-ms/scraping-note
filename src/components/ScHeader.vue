@@ -1,8 +1,6 @@
 <template>
   <div class="text-center">
-    <v-btn :disabled="isDisabled" @click="getScraping">
-      go scraping
-    </v-btn>
+    <v-btn :disabled="isDisabled" @click="getScraping">go scraping</v-btn>
   </div>
 </template>
 
