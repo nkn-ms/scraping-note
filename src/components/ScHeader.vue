@@ -17,7 +17,8 @@ export default {
     async getScraping() {
       this.isDisabled = true
       this.$store.dispatch('scraping/setIsLoading', true)
-      const url = 'https://powerful-reaches-95672.herokuapp.com/2'
+      // const url = 'https://powerful-reaches-95672.herokuapp.com/2'
+      const url = '/scraping'
       const res = await this.$store.dispatch('scraping/getScrapingData', url)
       if (res.status === 'error') {
         alert('スクレイピングに失敗したので事前に取得したデータを使います。')
